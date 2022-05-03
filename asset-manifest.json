@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/addin365-video-app/static/css/main.5e70a7fa.css",
-    "main.js": "/addin365-video-app/static/js/main.44d75be8.js",
+    "main.js": "/addin365-video-app/static/js/main.8dff7ac1.js",
     "static/media/footballpitch.png": "/addin365-video-app/static/media/footballpitch.974e81843b89d65d6b06.png",
     "index.html": "/addin365-video-app/index.html",
     "main.5e70a7fa.css.map": "/addin365-video-app/static/css/main.5e70a7fa.css.map",
-    "main.44d75be8.js.map": "/addin365-video-app/static/js/main.44d75be8.js.map"
+    "main.8dff7ac1.js.map": "/addin365-video-app/static/js/main.8dff7ac1.js.map"
   },
   "entrypoints": [
     "static/css/main.5e70a7fa.css",
-    "static/js/main.44d75be8.js"
+    "static/js/main.8dff7ac1.js"
   ]
 }
