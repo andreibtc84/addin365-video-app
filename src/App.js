@@ -2,7 +2,7 @@ import "./App.css";
 import { Login } from "@microsoft/mgt-react";
 import styled from "styled-components";
 import { Pages } from "./Pages/Pages";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter, HashRouter } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import { Providers, ProviderState } from "@microsoft/mgt-element";
 import { Landing } from "./Pages/Landing";
@@ -30,7 +30,7 @@ function useIsSignedIn() {
 function App() {
   const [isSignedIn] = useIsSignedIn();
   return (
-    <BrowserRouter>
+    <HashRouter>
       <AppContainer className="App">
         {!isSignedIn ? (
           <Landing />
@@ -52,7 +52,7 @@ function App() {
           </>
         )}
       </AppContainer>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 

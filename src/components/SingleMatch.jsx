@@ -8,7 +8,7 @@ export const SingleMatch = () => {
   const [game, setGame] = useState(
     JSON.parse(localStorage.getItem("currentMatch"))
   );
-  console.log(game);
+
   return (
     <>
       <Link

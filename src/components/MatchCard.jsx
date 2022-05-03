@@ -1,10 +1,10 @@
 import { React } from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
-import footballpitch from "../assets/images/footballpitch.png";
 
 export const MatchCard = ({ match }) => {
   const parsedDate = new Date(match.date).toUTCString();
+
   return (
     <nav
       onClick={() => {
@@ -13,9 +13,15 @@ export const MatchCard = ({ match }) => {
     >
       <MatchCardDiv to={`/SingleMatch/${match.title}`}>
         <MatchThumbnail
-          src={!match.thumbnail ? { footballpitch } : match.thumbnail}
+          src={match.thumbnail}
           alt={match.title}
           width="400px"
+          className="thumbnail"
+          onError={({ currentTarget }) => {
+            currentTarget.onerror = null; // prevents looping
+            currentTarget.src =
+              "https://w7.pngwing.com/pngs/168/212/png-transparent-football-pitch-street-football-athletics-field-graphy-football-field-angle-text-rectangle.png";
+          }}
         />
         <MatchDetailsDiv>
           <h2>{match.side1.name}</h2>
