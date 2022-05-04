@@ -6,6 +6,10 @@ import { ToolBar } from "../components/ToolBar";
 export const AllMatches = () => {
   const [matchList, setMatchList] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
+  const [championships, setChampionships] = useState([
+    "Filter by championship",
+  ]);
+  const [activeChampionship, setActiveChampionship] = useState([]);
 
   useEffect(() => {
     const getFiles = async () => {
@@ -23,16 +27,32 @@ export const AllMatches = () => {
         options
       );
       const data = await response.json();
+      const tournamentList = data
+        .map((match) => match.competition.name)
+        .filter((compName, index, arrRef) => arrRef.indexOf(compName) == index);
+      tournamentList.unshift("Filter by Championship");
+      setChampionships(tournamentList);
 
       setMatchList(data);
     };
     getFiles();
   }, []);
+
+  const filteredMatchList = matchList
+    .map(
+      (match) => match.competition.name.includes(activeChampionship) && match
+    )
+    .filter((mappedMatch) => mappedMatch.title && mappedMatch);
+
   return (
     <>
-      <ToolBar setSearchTerm={setSearchTerm} />
+      <ToolBar
+        setSearchTerm={setSearchTerm}
+        championships={championships}
+        setActiveChampionship={setActiveChampionship}
+      />
       <MatchList>
-        {matchList
+        {filteredMatchList
           .filter((match) =>
             !searchTerm
               ? match
