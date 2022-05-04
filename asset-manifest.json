@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/addin365-video-app/static/css/main.5e70a7fa.css",
-    "main.js": "/addin365-video-app/static/js/main.ac90afb6.js",
+    "main.js": "/addin365-video-app/static/js/main.e175faa6.js",
     "index.html": "/addin365-video-app/index.html",
     "main.5e70a7fa.css.map": "/addin365-video-app/static/css/main.5e70a7fa.css.map",
-    "main.ac90afb6.js.map": "/addin365-video-app/static/js/main.ac90afb6.js.map"
+    "main.e175faa6.js.map": "/addin365-video-app/static/js/main.e175faa6.js.map"
   },
   "entrypoints": [
     "static/css/main.5e70a7fa.css",
-    "static/js/main.ac90afb6.js"
+    "static/js/main.e175faa6.js"
   ]
 }
