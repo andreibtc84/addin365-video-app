@@ -24,11 +24,11 @@ const ToolBarContainer = styled.div`
   gap: 1rem;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
+  width: 80%;
   padding: 2rem;
   margin: 3rem auto;
 
-  @media (max-width: 950px) {
+  @media (max-width: 1150px) {
     justify-content: center;
   }
 `;
