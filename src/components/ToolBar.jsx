@@ -20,10 +20,15 @@ export const ToolBar = ({
 
 const ToolBarContainer = styled.div`
   display: flex;
-  flex-flow: row;
+  flex-flow: row wrap;
+  gap: 1rem;
   align-items: center;
   justify-content: space-between;
   width: 100%;
   padding: 2rem;
   margin: 3rem auto;
+
+  @media (max-width: 950px) {
+    justify-content: center;
+  }
 `;

@@ -49,12 +49,18 @@ const MatchCardDiv = styled(Link)`
   margin: 1.5rem;
   border-radius: 0.5rem;
   width: 20rem;
-  height: 30rem;
+  height: 28rem;
   overflow: hidden;
   justify-content: space-between;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   text-decoration: none;
   color: black;
+
+  @media (max-width: 370px) {
+    width: 15rem;
+    height: 20rem;
+    font-size: 0.7rem;
+  }
 
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,

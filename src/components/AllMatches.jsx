@@ -74,5 +74,5 @@ const MatchList = styled.div`
   margin: 0 auto;
   text-decoration: none;
   background-color: whitesmoke;
-  max-width: 80%;
+  max-width: 78%;
 `;
