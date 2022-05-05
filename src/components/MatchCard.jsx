@@ -17,6 +17,7 @@ export const MatchCard = ({ match }) => {
           alt={match.title}
           width="400px"
           className="thumbnail"
+          // If there's an error opening the thumb img, adds a fallback image
           onError={({ currentTarget }) => {
             currentTarget.onerror = null; // prevents looping
             currentTarget.src =

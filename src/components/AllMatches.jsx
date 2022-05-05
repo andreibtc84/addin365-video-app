@@ -12,6 +12,7 @@ export const AllMatches = () => {
   const [activeChampionship, setActiveChampionship] = useState([]);
 
   useEffect(() => {
+    // Function to fetch data from API
     const getFiles = async () => {
       const options = {
         method: "GET",
@@ -27,16 +28,21 @@ export const AllMatches = () => {
         options
       );
       const data = await response.json();
+
+      // Populates an array to be used in the select tag
+
       const tournamentList = data
         .map((match) => match.competition.name)
         .filter((compName, index, arrRef) => arrRef.indexOf(compName) == index);
       tournamentList.unshift("Filter by Championship");
-      setChampionships(tournamentList);
 
+      setChampionships(tournamentList);
       setMatchList(data);
     };
     getFiles();
   }, []);
+
+  // Filters by selected championship
 
   const filteredMatchList = matchList
     .map(
@@ -52,6 +58,7 @@ export const AllMatches = () => {
         setActiveChampionship={setActiveChampionship}
       />
       <MatchList>
+        {/* Conditionally renders based on search term and filtered match list */}
         {filteredMatchList
           .filter((match) =>
             !searchTerm

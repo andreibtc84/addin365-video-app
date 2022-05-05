@@ -7,6 +7,7 @@ import React, { useState, useEffect } from "react";
 import { Providers, ProviderState } from "@microsoft/mgt-element";
 import { Landing } from "./Pages/Landing";
 
+// Function checking if there's a logged in user using Mgt Provider
 function useIsSignedIn() {
   const [isSignedIn, setIsSignedIn] = useState(false);
 
@@ -32,6 +33,7 @@ function App() {
   return (
     <HashRouter>
       <AppContainer className="App">
+        {/* Checks if user is signedß in and conditionally renders either the landing page either the other components  */}
         {!isSignedIn ? (
           <Landing />
         ) : (
@@ -45,8 +47,7 @@ function App() {
                   width="70px"
                 />
               </div>
-
-              <LoggedInUser className="mgt-light" />
+              <LoggedInUser className="mgt-light" /> {/* Mgt Login component */}
             </AppHeader>
             <Pages />
           </>
